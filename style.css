@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Raleway:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #41393E;
+  --secondary-color: #635759;
+  --accent-color: #9CC8F3;
+  --caption-alpha: 0.5;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: var(--primary-color);
+}
+
+main {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin: auto;
+  padding: 0px 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1000px;
+  box-shadow: 30px 0px 40px rgba(0,0,0,0.1), 
+             -30px 0px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li, .home {
+  list-style: none;
+  margin: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 1.25em;
+  display: inline-block;
+  padding: 6px;
+  border: 2px var(--secondary-color);
+  border-style: solid;
+  border-radius: 10px;
+  transition: 250ms ease;
+}
+
+#active {
+  border-color: var(--accent-color);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 20px;
+  transition: 500ms ease;
+}
+
+nav .logo {
+  font-weight: bold;
+}
+
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  box-shadow: calc(50vw - 15px) 15px 30px -10px rgba(0,0,0,0.5),
+              calc(-50vw + 15px) 15px 30px -10px rgba(0,0,0,0.5);
+}
+
+#home-hero > .hero-image {
+  background-image: url('images/home/hero-image.jpg');
+}
+
+#info-hero > .hero-image {
+  background-image: url('images/info/hero-image.jpg');
+}
+
+#club-hero > .hero-image {
+  background-image: url('images/club/hero-image.jpg');
+}
+
+.hero-image h1 {
+  color: var(--primary-color);
+  font-size: 350%;
+  position: relative;
+  text-align: right;
+  padding: 9vh 2%;
+}
+
+.caption {
+  background-color: rgba(99, 87, 89, var(--caption-alpha));
+  color: #fff;
+  padding: 2px 4px;
+  float: right;
+  position: relative;
+  top: -46px;
+  right: 20px;
+}
+
+#about, #history {
+  display: flex;
+}
+
+#about {
+  padding-bottom: 80px;
+}
+
+.text {
+  width: 100%;
+  margin: 0px 20px;
+}
+
+.image-container {
+  max-width: 340px;
+}
+
+.image {
+  margin: 0px 20px;
+  max-width: 300px;
+}
+
+.line {
+  color: var(--accent-color);
+  line-height: 0.5;
+  margin-bottom: 10px;
+}
+
+#about-caption, #history-caption {
+  float: left;
+  left: 40px;
+}
+
+footer {
+  margin: 80px auto;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+#map-text {
+  margin-top: 40px;
+}
+
+#route {
+  margin-top: 80px;
+}
+
+hr {
+  margin: 80px 0;
+  border-color: var(--accent-color);
+}
+
+#club-button {
+  width: min-content;
+  white-space: nowrap;
+  padding-top: 20px;
+}
+
+#club-button a {
+  text-decoration: none;
+}
+
+#club-button p {
+  padding: 6px;
+  color: #fff;
+  font-weight: bold;
+  border: 2px var(--accent-color);
+  border-style: solid;
+  border-radius: 10px;
+  transition: 500ms ease;
+}
+
+#club-button a :hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border-color: var(--accent-color);
+  border-radius: 20px;
+  transition: 500ms ease; 
+}
+
+.turk-text {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  nav {
+    width: 100%;
+  }
+
+  .caption {
+    float: right;
+    right: auto;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  #about, #history {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .text, .image-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  nav li, .home {
+    margin: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 0 10px;
+    padding-bottom: 20px;
+  }
+
+  .image, .text {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #home-hero-caption, #info-hero-caption {
+    top: -68px;
+  }
+}
